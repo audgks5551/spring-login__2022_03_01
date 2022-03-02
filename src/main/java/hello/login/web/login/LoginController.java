@@ -88,7 +88,7 @@ public class LoginController {
         // 로그인 성공 처리 TODO
         // 세션이 있으면 있는 세션 반환, 없으면 신규 세션을 생성
         HttpSession session = request.getSession();
-        // 세션에 로그인 회원 정보 보관
+        // 세션에 로그인 회원 정보 보관 (uuid는 스프링이 설정해줌, 우리는 세션이름과 값만 보내주면 됨)
         session.setAttribute(SessionConst.LOGIN_MEMBER, loginMember);
 
         return "redirect:/";
